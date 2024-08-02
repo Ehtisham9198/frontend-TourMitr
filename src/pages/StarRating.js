@@ -35,7 +35,7 @@ const StarRating = ({userId, placeId}) => {
     }
 
     try {
-      const response = await fetch(`/api/v1/auth/rating`, {
+      const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/api/v1/auth/rating`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
