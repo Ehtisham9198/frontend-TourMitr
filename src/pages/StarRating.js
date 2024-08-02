@@ -2,11 +2,14 @@ import React, { useState, useEffect } from 'react';
 import './StarRating.css';
 import { useAuth } from '../context/auth';
 
-const StarRating = ({ userId, placeId}) => {
+const StarRating = ({userId, placeId}) => {
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
   const [averageRating, setAverageRating] = useState(0);
-  const [auth, setAuth] = useAuth();
+
+  console.log(userId);
+  console.log(placeId);
+
   const fetchAverageRating = async () => {
     try {
       const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/api/v1/auth/rating/${placeId}`);
@@ -26,7 +29,7 @@ const StarRating = ({ userId, placeId}) => {
   }, [placeId]);
 
   const handleClick = async (value) => {
-    if (!auth) {
+    if (!userId) {
       alert("You must be logged in to submit a rating.");
       return;
     }
