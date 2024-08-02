@@ -87,7 +87,7 @@ const locationData = {
     name: "Bhubaneswar",
     description: "Bhubaneswar, the capital city of Odisha, is famously known as the 'City of Temples.' It boasts a rich historical and cultural heritage, with numerous ancient temples, monuments, and modern attractions.",
     places: [
-      { name: "Khandagiri Caves", description: "Khandagiri Caves are ancient rock-cut caves that date back to the 2nd century BCE. These caves were carved by Jain monks and are known for their historical and archaeological significance.", image: image, Id: 0, category: "Historical" },
+      { name: "Khandagiri Caves", description: "Khandagiri Caves are ancient rock-cut caves that date back to the 2nd century BCE. These caves were carved by Jain monks and are known for their historical and archaeological significance.", image: image, Id: -1, category: "Historical" },
       { name: "Deras Dam", description: "Deras Dam is a serene picnic spot surrounded by lush greenery and tranquil waters. It is an ideal place for nature lovers and those looking to escape the hustle and bustle of the city.", image: deras, Id: 1, category: "Nature" },
       { name: "Biju Patnaik Park", description: "Named after the former Chief Minister of Odisha, Biju Patnaik Park is a popular urban park offering well-maintained gardens, walking paths, and recreational facilities.", image: biju, Id: 2, category: "Park" },
       { name: "Dhauli Stupa", description: "Dhauli Stupa, also known as Shanti Stupa, is a significant Buddhist monument located on the banks of the Daya River. It marks the site where Emperor Ashoka is believed to have embraced Buddhism after the Kalinga War.", image: Dhauli, Id: 3, category: "Historical" },
