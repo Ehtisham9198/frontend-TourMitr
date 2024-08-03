@@ -13,6 +13,7 @@ const Home = () => {
         <div className="mt-16 mx-4 justify-center">
           <Carousel />
         </div>
+      
       </Layout>
     </div>
   );

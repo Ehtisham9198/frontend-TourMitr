@@ -1,34 +1,51 @@
-.con h1{
-    font-size: 40px;
-    font-weight: 700;
+.about-container {
+    margin: 5px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-container h1 {
+    font-size: 2.5em;
     margin-bottom: 20px;
-}
-.con{
-    margin-left: 230px;
-    margin-top:150px;
-    width: 400px;
-}
-.ecomimage{
-   right:15%;
-   top: 17%;
-   position: absolute;
-}
-
-@media only screen and (max-width: 1200px) {
-    .con { 
-        margin-top: 50px;
-        width: 320px;
-        right: 20% ;
-        position: absolute;
+    color: #2c3e50;
+    text-align: center;
+  }
+  
+  .about-container p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #34495e;
+  }
+  
+  .about-container p.signature {
+    text-align: right;
+    font-style: italic;
+    color: #2980b9;
+  }
+  
+  .about-container strong {
+    color: #e74c3c;
+  }
+  .logo-text {
+    font-family: 'Pacifico', cursive; 
+    color: #fbbf24; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  @media (max-width: 768px) {
+    .about-container {
+      padding: 15px;
+      max-width: 95%;
     }
-    .con h1{
-        margin-bottom: 20px;
+  
+    .about-container h1 {
+      font-size: 2em;
     }
-    .ecomimage {
-        top: auto;
-        margin-top: 20px;
-        right: 0;
-
+  
+    .about-container p {
+      font-size: 1em;
     }
-
-}
+  }
