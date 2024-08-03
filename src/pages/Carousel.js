@@ -49,7 +49,7 @@ const Carousel = () => {
           />
           <div className=" mt-8 text-center">
             <h2 className="text-xl font-bold">{slide.title}</h2>
-            <h2 className="text-gray-700 mt-4 mb-32">{slide.description}</h2>
+            <h2 className="text-gray-700">{slide.description}</h2>
           </div>
         </div>
       ))}
