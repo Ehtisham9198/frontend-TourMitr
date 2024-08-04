@@ -24,11 +24,12 @@ const StarRating = ({userId, placeId}) => {
 
     const fetchNoOfRatings = async () => {
         try {
-            const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/api/v1/auth/NoOfrating/${placeId}`);
+            const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/api/v1/auth/noofrating/${placeId}`);
             if (response.ok) {
                 const data = await response.json();
                 setNoOfRatings(data.totalRatings);
-            } else {
+                console.log(data.totalRatings);
+            } else { 
                 throw new Error(`Error: ${response.statusText}`);
             }
         } catch (error) {
