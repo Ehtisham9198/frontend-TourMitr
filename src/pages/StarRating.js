@@ -6,9 +6,7 @@ const StarRating = ({userId, placeId}) => {
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
   const [averageRating, setAverageRating] = useState(0);
-
-  console.log(userId);
-  console.log(placeId);
+  const [ratings, setNoOfRatings] = useState(null);
 
   const fetchAverageRating = async () => {
     try {
@@ -24,8 +22,23 @@ const StarRating = ({userId, placeId}) => {
     }
   };
 
+    const fetchNoOfRatings = async () => {
+        try {
+            const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/api/v1/auth/NoOfrating/${placeId}`);
+            if (response.ok) {
+                const data = await response.json();
+                setNoOfRatings(data.totalRatings);
+            } else {
+                throw new Error(`Error: ${response.statusText}`);
+            }
+        } catch (error) {
+            console.error('Error fetching number of ratings:', error.message);
+        }
+      }
+
   useEffect(() => {
     fetchAverageRating();
+    fetchNoOfRatings();
   }, [placeId]);
 
   const handleClick = async (value) => {
@@ -54,6 +67,8 @@ const StarRating = ({userId, placeId}) => {
     }
   };
 
+
+
   return (
     <div className="star-rating" >
       <p>{(averageRating ?? 0).toFixed(1)}</p>
@@ -72,6 +87,7 @@ const StarRating = ({userId, placeId}) => {
           </button>
         );
       })}
+      <h1 className=' text-2xl'>({ratings})</h1>
     </div>
   );
 };
