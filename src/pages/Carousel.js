@@ -34,7 +34,7 @@ const Carousel = () => {
   }, []);
 
   return (
-    <div className="relative w-full max-w-[500px] mx-auto min-h-[calc(100vh-256px)]">
+    <div className="relative w-full max-w-[500px] mx-auto min-h-[calc(100vh-256px)] mt-24 ">
       {slides.map((slide, index) => (
         <div
           key={index}
