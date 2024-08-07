@@ -30,10 +30,10 @@ const Header = () => {
         </div>
         <div className=' hidden md:flex md:items-center'>
           
-          {auth.user && <NavLink to='/rec' className='me-3 nav-link font-bold'>Get Places</NavLink>}
-          {!auth.user && <NavLink to='/login' className='me-3 nav-link font-bold'>Login</NavLink>}
-          {!auth.user && <NavLink to='/register' className='me-3 nav-link font-bold'>Register</NavLink>}
-          {auth.user && <NavLink to='/profile' className='me-3 nav-link font-bold'>Profile</NavLink>}
+          {auth.user && <NavLink to='/rec' className='me-3 nav-link font-bold'>GET PLACES</NavLink>}
+          {!auth.user && <NavLink to='/login' className='me-3 nav-link font-bold'>LOGIN</NavLink>}
+          {!auth.user && <NavLink to='/register' className='me-3 nav-link font-bold'>REGISTER</NavLink>}
+          {auth.user && <NavLink to='/profile' className='me-3 nav-link font-bold'>PROFILE</NavLink>}
           {auth.user && <button onClick={LOGOUT} className='me-3 nav-link font-bold'>LOGOUT</button>}
         </div>
       </div>
