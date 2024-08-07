@@ -10,6 +10,7 @@ import Contact from './pages/ContactUs';
 import About from './pages/Aboutus';
 import LocationPage from './pages/LocationPage'
 import Rec from './pages/recommend'
+import Profile from './pages/Profile';
 // .ide
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path='/contact' element={<Contact/>}/>
           <Route path='/about' element={<About/>}/>
           <Route path='/rec' element={<Rec/>}/>
+          <Route path='/profile' element={<Profile/>}/>
           <Route path='*' element={<PageNotFound/>}/>
         </Routes>
         </div>
