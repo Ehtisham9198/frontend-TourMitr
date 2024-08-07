@@ -39,10 +39,10 @@ const Header = () => {
       </div>
 
       <div className={`absolute top-1 right-4 w-fit py-2 mt-16 shadow-md rounded-md bg-gray-600 text-white flex-col md:hidden ${isMenuOpen ? 'flex' : 'hidden'}`}>
-        {auth.user && <NavLink to='/rec' className='py-2 px-9 nav-link font-bold'>Get Places</NavLink>}
-        {!auth.user && <NavLink to='/login' className='py-2 px-9 nav-link font-bold'>Login</NavLink>}
-        {!auth.user && <NavLink to='/register' className='py-2 px-9 nav-link font-bold'>Register</NavLink>}
-        {auth.user && <NavLink to='/profile' className='py-2 px-9 nav-link font-bold'>Profile</NavLink>}
+        {auth.user && <NavLink to='/rec' className='py-2 px-9 nav-link font-bold'>GET PLACES</NavLink>}
+        {!auth.user && <NavLink to='/login' className='py-2 px-9 nav-link font-bold'>LOGIN</NavLink>}
+        {!auth.user && <NavLink to='/register' className='py-2 px-9 nav-link font-bold'>REGISTER</NavLink>}
+        {auth.user && <NavLink to='/profile' className='py-2 px-9 nav-link font-bold'>PROFILE</NavLink>}
         {auth.user && <button onClick={LOGOUT} className='py-2 px-9 nav-link font-bold text-left'>LOGOUT</button>}
       </div>
     </div>

@@ -7,8 +7,8 @@ const Profile = () => {
 
   return (
     <Layout title="Profile">
-      <div className="flex justify-center items-start min-h-screen">
-        <div className="w-full max-w-md mt-10 mx-auto p-5 bg-white shadow-lg rounded-lg" style={{ marginTop: '10%' }}>
+      <div className="flex justify-center items-start min-h-screen px-4" style={{ marginTop: '80px' }}>
+        <div className="w-full max-w-md p-5 bg-white shadow-lg rounded-lg">
           {auth.user ? (
             <div className="text-center">
               <img 
@@ -18,7 +18,7 @@ const Profile = () => {
               />
               <h1 className="text-3xl font-bold mb-2">{auth.user.name}</h1>
               <p className="text-lg mb-1"><strong>City:</strong> {auth.user.address}</p>
-              <p className="text-lg mb-1"><strong>Interests:</strong> {auth.user.interests.join(",")}</p>
+              <p className="text-lg mb-1"><strong>Interests:</strong> {auth.user.interests.join(", ")}</p>
               <p className="text-lg mb-1"><strong>Contact:</strong> {auth.user.contact}</p>
             </div>
           ) : (
