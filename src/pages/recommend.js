@@ -24,7 +24,7 @@ const RecommendationPage = () => {
       console.error('User interests or city are missing');
       return;
     }
-
+  console.log("Entering into try")
     try {
       const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/api/v1/auth/recommendations`, {
         method: 'POST',
@@ -36,6 +36,7 @@ const RecommendationPage = () => {
           userCity
         })
       });
+      console.log(response,"error here");
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
