@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-  "proxy": "http://localhost:80",
+  "proxy": "https://tourmitr-fqcsdqbra7c7fcb6.southindia-01.azurewebsites.net",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.2",
