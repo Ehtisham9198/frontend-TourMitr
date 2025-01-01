@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { useAuth } from '../context/auth';
+import { useNavigate } from "react-router";
 
 const Header = () => {
   const [auth, setAuth] = useAuth();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const navigate = useNavigate();
 
   const LOGOUT = () => {
     localStorage.removeItem('auth');
     setAuth({ user: null });
+    navigate('/')
   }
 
   const toggleMenu = () => {
